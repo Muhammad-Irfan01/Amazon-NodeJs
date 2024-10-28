@@ -22,7 +22,7 @@ const TopBar = () => {
             </div>
 
             <div className='flex items-center text-white space-x-16'>
-                <Link to={''}><button>SignIn</button></Link>
+                <Link to={'/signin'}><button>SignIn</button></Link>
                
                     <ImCart className='text-white text-2xl'/>
                 

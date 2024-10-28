@@ -4,9 +4,22 @@ import banner2 from "../../../public/banner2.jpg";
 import { useState } from "react";
 
 const Hero = () => {
+  
+
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const images = [banner1, banner2]; // Array of image sources
+  // const images = [banner1, banner2]; 
+
+  const images = [
+    {
+      standard: "/public/banner1.jpg",
+      highRes: "/public/banner1@2x.jpg",
+    },
+    {
+      standard: "/public/banner2.jpg",
+      highRes: "/public/banner2@2x.jpg",
+    },
+  ];
 
   const handlePrev = () => {
     const newIndex = currentIndex === 0 ? images.length - 1 : currentIndex - 1;
@@ -28,8 +41,9 @@ const Hero = () => {
             }`}
           >
             <img
-              src={image}
-              className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+              src={image.standard}
+              srcSet={`${image.standard} 1x, ${image.highRes} 2x`}
+              className="absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
               alt={`Slide ${index + 1}`}
             />
           </div>

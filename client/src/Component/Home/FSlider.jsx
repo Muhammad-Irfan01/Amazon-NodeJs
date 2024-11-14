@@ -7,7 +7,7 @@ import { fslider } from './HomeData';
 import 'swiper/css/autoplay';
 import garnier from '../../../public/garnier.jpg'
 import { useState, useEffect } from 'react';
-import { getProducts } from '../Redux/Action/Action';
+import { getProducts } from '../Redux/Action/action';
 import {useSelector, useDispatch} from "react-redux"
 
 

@@ -2,7 +2,7 @@
 
 export const getProducts = () => async(dispatch) =>{
     try {
-        const DataFromDB = await fetch ('http://localhost:8080/getproducts', {
+        const DataFromDB = await fetch ('http://localhost:5500/getproducts', {
             method : "GET",
             headers : {
                 "Content-type" : "application/json"
@@ -10,6 +10,7 @@ export const getProducts = () => async(dispatch) =>{
         })
 
         const res = await DataFromDB.json();
+        // console.log(res);
         dispatch({type : "SUCCESSFUL_GET_DATA", payload : res});
         
     } catch (error) {

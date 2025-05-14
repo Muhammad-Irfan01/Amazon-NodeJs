@@ -1,9 +1,15 @@
 const mongoose  = require('mongoose');
 
 const ProductSchema  = new mongoose.Schema({
+    id : String,
     image : String,
+    mainHeading : String,
+    subHeading : String,
+    MRP : Number,
+    Deal : Number,
+    description : String,
     name : String,
-    price : String,
+    price : Number,
     width : String
 });
 

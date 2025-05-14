@@ -6,8 +6,6 @@ const Hero = () => {
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // const images = [banner1, banner2]; 
-
   const images = [
     {
       standard: "/public/banner1.jpg",

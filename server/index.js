@@ -16,9 +16,7 @@ app.use(cookieParser(""));
 app.use(cors({origin: 'http://localhost:5173', credentials: true}));
 app.use(Router);
 
-port = 5500
-app.listen(port, () =>{
-    console.log(`App is Running on Port ${port}`);
+app.listen(process.env.PORT, () =>{
+    console.log(`App is Running on Port ${process.env.PORT}`);
 });
 
-// defaultData();
